@@ -1,7 +1,10 @@
 /* A system that logs watched movies and series and rates them */
 
+// Defining constants
+const list = document.querySelector("#list");
+
 // Add Data to localStorage
-function addData() {}
+function displayWatchedMovies() {}
 
 // Show Data
 
