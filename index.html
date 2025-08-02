@@ -9,6 +9,19 @@
   </head>
   <body>
     <h1>Watched Movies and Series</h1>
-    <ul id="list"></ul>
+    <form id="form">
+        <input type="text" id="input" name="input" />
+        <input type="submit" />
+      </form>
+      <label for="show-favourites">Show Favourite Movies And Series</label>
+      <input type="checkbox" id="completed" />
+      <select name="sort-by" id="sort-by">
+        <option value="time-desc">First added</option>
+        <option value="time-asc">Last added</option>
+        <option value="alpha-asc">A til Å</option>
+        <option value="alpha-desc">Å til A</option>
+      </select>
+    </header>
+    <main id="list"></main>
   </body>
 </html>

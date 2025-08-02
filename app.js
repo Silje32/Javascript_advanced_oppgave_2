@@ -2,6 +2,9 @@
 
 // Defining constants
 const list = document.querySelector("#list");
+const input = document.querySelector("#input");
+const showFavourites = document.querySelector("completed");
+const sortBy = document.querySelector("sort-by");
 
 // Add Data to localStorage
 function displayWatchedMovies() {}
