@@ -6,7 +6,25 @@ const input = document.querySelector("#input");
 const showFavourites = document.querySelector("completed");
 const sortBy = document.querySelector("sort-by");
 
-// Add Data to localStorage
+let tasks = [];
+let filters = { showCompleted: false, sortType: "time-desc" };
+
+// Add Data To Local Storage
+const saveTasksToStorage = () =>
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+// Sort a todo
+sortBy.addEventListener("change", (e) => {
+  filters.sortType = e.target.value;
+  renderPage();
+});
+
+toggleShowCompleted.addEventListener("change", (e) => {
+  // filters.showCompleted = !filters.showCompleted
+  filters.showCompleted = e.target.checked;
+  renderPage();
+});
+
 function displayWatchedMovies() {}
 
 // Show Data
