@@ -1,4 +1,33 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 h1 {
   color: teal;
   text-align: center;
+  padding: 30px;
+}
+/* Form */
+/* Submit button styling */
+form input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+/* To-Do List Styles (Main) */
+#list-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
