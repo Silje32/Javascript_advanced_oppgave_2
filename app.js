@@ -42,20 +42,32 @@ taskForm.addEventListener("submit", (e) => {
   /* Pushe tasks */
   tasks.push({
     timestamp: new Date(),
-    -54,126 +58,126 
+    description: userInput,
+    completed: false,
+  });
+  saveTasksToStorage();
+  renderPage();
+});
+
+const completeTaskInput = (task) => {
+  const inputElement = document.createElement("input");
+  inputElement.type = "checkbox";
+  inputElement.checked = task.completed;
+
+  inputElement.addEventListener("change", (e) => {
+    task.completed = e.target.checked;
+    saveTasksToStorage();
+    renderPage();
   });
 
   return inputElement;
 };
-
 
 // Update Data and add as favourite or recommended
 
 // Filter Data
 
 // Sort Data alphanumeric or by date
-
-
 
 // Edit task button
 // Edit
