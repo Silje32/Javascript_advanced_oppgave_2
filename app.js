@@ -25,7 +25,29 @@ toggleCompleted.addEventListener("change", (e) => {
   renderPage();
 });
 
-// Show Data
+// Show Data - make the list
+const taskForm = document.querySelector("#task-form");
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(taskForm);
+  const userInput = formData.get("task-input");
+
+  if (!userInput) {
+    return alert("Input cannot be empty.");
+  }
+  // Clear the input field after submission
+  taskInput.value = "";
+
+  /* Pushe tasks */
+  tasks.push({
+    timestamp: new Date(),
+@@ -54,126 +58,126 @@
+  });
+
+  return inputElement;
+};
+
 
 // Update Data and add as favourite or recommended
 
@@ -33,8 +55,10 @@ toggleCompleted.addEventListener("change", (e) => {
 
 // Sort Data alphanumeric or by date
 
+
+
 // Edit task button
-// Edit a todo
+// Edit
 const editTaskButton = (task, descriptionElement) => {
   const buttonElement = document.createElement("button");
   buttonElement.classList.add("edit-button");
