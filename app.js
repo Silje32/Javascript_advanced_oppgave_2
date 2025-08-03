@@ -42,7 +42,7 @@ taskForm.addEventListener("submit", (e) => {
   /* Pushe tasks */
   tasks.push({
     timestamp: new Date(),
-@@ -54,126 +58,126 @@
+    -54,126 +58,126 
   });
 
   return inputElement;
