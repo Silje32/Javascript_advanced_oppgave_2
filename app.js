@@ -54,7 +54,24 @@ const deleteTaskButton = (task) => {
   return buttonElement;
 };
 
-//Buttons
+const buildPage = (tasksArr) => {
+  console.log(tasksArr);
+  listContainer.replaceChildren();
+  tasksArr.forEach((task) => {
+    const taskContainer = document.createElement("div");
+    taskContainer.classList.add("task-container");
+
+    const timestampElement = document.createElement("p");
+    timestampElement.classList.add("datetime");
+    timestampElement.textContent = task.timestamp;
+    timestampElement.textContent = task.timestamp.toLocaleString("en-UK");
+
+    const descriptionElement = document.createElement("input");
+    descriptionElement.classList.add("description");
+    descriptionElement.readOnly = true;
+    descriptionElement.value = task.description;
+
+    //Buttons
     const inputElement = completeTaskInput(task);
     const editBtn = editTaskButton(task, descriptionElement);
     const deleteBtn = deleteTaskButton(task);
@@ -77,7 +94,6 @@ const renderPage = () => {
   }
   buildPage(filterArray(tasks));
 };
-
 
 // Filter Data
 
