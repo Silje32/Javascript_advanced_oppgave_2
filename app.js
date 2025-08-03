@@ -31,6 +31,10 @@ function displayWatchedMovies() {}
 
 // Update Data and add as favourite or recommended
 
+// Filter Data
+
+// Sort Data alphanumeric or by date
+
 // Remove Data - Delete
 const deleteTaskButton = (task) => {
   const buttonElement = document.createElement("button");
@@ -49,6 +53,31 @@ const deleteTaskButton = (task) => {
 
   return buttonElement;
 };
+
+//Buttons
+    const inputElement = completeTaskInput(task);
+    const editBtn = editTaskButton(task, descriptionElement);
+    const deleteBtn = deleteTaskButton(task);
+
+    taskContainer.append(
+      timestampElement,
+      descriptionElement,
+      inputElement,
+      editBtn,
+      deleteBtn
+    );
+
+    listContainer.prepend(taskContainer);
+  });
+};
+const renderPage = () => {
+  const storedTasks = localStorage.getItem("tasks");
+  if (storedTasks) {
+    tasks = JSON.parse(storedTasks);
+  }
+  buildPage(filterArray(tasks));
+};
+
 
 // Filter Data
 
