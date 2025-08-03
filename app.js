@@ -33,6 +33,12 @@ toggleCompleted.addEventListener("change", (e) => {
 
 // Sort Data alphanumeric or by date
 
+// Created and styled my input field
+const descriptionElement = document.createElement("input");
+descriptionElement.classList.add("description");
+descriptionElement.readOnly = true;
+descriptionElement.value = task.description;
+
 // Remove Data - Delete
 const deleteTaskButton = (task) => {
   const buttonElement = document.createElement("button");
