@@ -7,7 +7,7 @@ const showFavourites = document.querySelector("completed");
 const sortBy = document.querySelector("sort-by");
 
 let tasks = [];
-let filters = { showcompleted: false, sortType: "time-desc" };
+let filters = { showCompleted: false, sortType: "time-desc" };
 
 // Add Data To Local Storage
 const saveTasksToStorage = () =>
