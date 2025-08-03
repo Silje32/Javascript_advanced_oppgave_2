@@ -13,19 +13,7 @@ let filters = { completed: false, sortType: "time-desc" };
 const saveTasksToStorage = () =>
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-// Sort
-sortBy.addEventListener("change", (e) => {
-  filters.sortType = e.target.value;
-  renderPage();
-});
-
-toggleCompleted.addEventListener("change", (e) => {
-  // filters.coompleted = !filters. completed
-  filters.toggle.Completed = e.target.checked;
-  renderPage();
-});
-
-// Sort a movie
+// Sort a movie or series
 sortBy.addEventListener("change", (e) => {
   filters.sortType = e.target.value;
   renderPage();
