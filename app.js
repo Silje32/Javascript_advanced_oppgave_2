@@ -25,6 +25,18 @@ toggleCompleted.addEventListener("change", (e) => {
   renderPage();
 });
 
+// Sort a movie
+sortBy.addEventListener("change", (e) => {
+  filters.sortType = e.target.value;
+  renderPage();
+});
+
+toggleShowCompleted.addEventListener("change", (e) => {
+  // filters.showCompleted = !filters.showCompleted
+  filters.showCompleted = e.target.checked;
+  renderPage();
+});
+
 // Show Data - make the list
 const taskForm = document.querySelector("#task-form");
 taskForm.addEventListener("submit", (e) => {
