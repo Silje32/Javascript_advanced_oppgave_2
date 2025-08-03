@@ -33,6 +33,11 @@ toggleCompleted.addEventListener("change", (e) => {
 
 // Sort Data alphanumeric or by date
 
+// Date the movie or series are published
+const timestampElement = document.createElement("p");
+timestampElement.classList.add("datetime");
+timestampElement.textContent = task.timestamp.toLocaleString("en-UK");
+
 // Created and styled my input field
 const descriptionElement = document.createElement("input");
 descriptionElement.classList.add("description");
