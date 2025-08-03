@@ -25,8 +25,6 @@ toggleCompleted.addEventListener("change", (e) => {
   renderPage();
 });
 
-function displayWatchedMovies() {}
-
 // Show Data
 
 // Update Data and add as favourite or recommended
