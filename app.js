@@ -33,6 +33,23 @@ toggleCompleted.addEventListener("change", (e) => {
 
 // Sort Data alphanumeric or by date
 
+// Edit task button
+// Edit a todo
+const editTaskButton = (task, descriptionElement) => {
+  const buttonElement = document.createElement("button");
+  buttonElement.classList.add("edit-button");
+  buttonElement.textContent = "Edit";
+
+  buttonElement.addEventListener("click", (e) => {
+    task.description = descriptionElement.value;
+    descriptionElement.readOnly = !descriptionElement.readOnly;
+    buttonElement.textContent = descriptionElement.readOnly ? "Edit" : "Save";
+    saveTasksToStorage();
+  });
+
+  return buttonElement;
+};
+
 // Remove Data - Delete
 const deleteTaskButton = (task) => {
   const buttonElement = document.createElement("button");
