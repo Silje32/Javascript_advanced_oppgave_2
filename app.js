@@ -33,17 +33,6 @@ toggleCompleted.addEventListener("change", (e) => {
 
 // Sort Data alphanumeric or by date
 
-// Date the movie or series are published
-const timestampElement = document.createElement("p");
-timestampElement.classList.add("datetime");
-timestampElement.textContent = task.timestamp.toLocaleString("en-UK");
-
-// Created and styled my input field
-const descriptionElement = document.createElement("input");
-descriptionElement.classList.add("description");
-descriptionElement.readOnly = true;
-descriptionElement.value = task.description;
-
 // Remove Data - Delete
 const deleteTaskButton = (task) => {
   const buttonElement = document.createElement("button");
@@ -72,7 +61,6 @@ const buildPage = (tasksArr) => {
 
     const timestampElement = document.createElement("p");
     timestampElement.classList.add("datetime");
-    timestampElement.textContent = task.timestamp;
     timestampElement.textContent = task.timestamp.toLocaleString("en-UK");
 
     const descriptionElement = document.createElement("input");
