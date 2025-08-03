@@ -31,7 +31,24 @@ function displayWatchedMovies() {}
 
 // Update Data and add as favourite or recommended
 
-// Remove Data
+// Remove Data - Delete
+const deleteTaskButton = (task) => {
+  const buttonElement = document.createElement("button");
+  buttonElement.classList.add("delete-button");
+  buttonElement.textContent = "Delete";
+
+  buttonElement.addEventListener("click", (e) => {
+    const taskIndex = tasks.indexOf(task);
+    if (taskIndex > -1) {
+      tasks.splice(taskIndex, 1);
+    }
+
+    saveTasksToStorage();
+    renderPage();
+  });
+
+  return buttonElement;
+};
 
 // Filter Data
 
