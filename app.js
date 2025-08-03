@@ -7,21 +7,21 @@ const showFavourites = document.querySelector("completed");
 const sortBy = document.querySelector("sort-by");
 
 let tasks = [];
-let filters = { showCompleted: false, sortType: "time-desc" };
+let filters = { completed: false, sortType: "time-desc" };
 
 // Add Data To Local Storage
 const saveTasksToStorage = () =>
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-// Sort a todo
+// Sort
 sortBy.addEventListener("change", (e) => {
   filters.sortType = e.target.value;
   renderPage();
 });
 
-toggleShowCompleted.addEventListener("change", (e) => {
-  // filters.showCompleted = !filters.showCompleted
-  filters.showCompleted = e.target.checked;
+toggleCompleted.addEventListener("change", (e) => {
+  // filters.coompleted = !filters. completed
+  filters.toggle.Completed = e.target.checked;
   renderPage();
 });
 
