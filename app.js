@@ -65,12 +65,9 @@ const completeTaskInput = (task) => {
 
 // Update Data and add as favourite or recommended
 
-// Filter Data
-
 // Sort Data alphanumeric or by date
 
 // Edit task button
-// Edit
 const editTaskButton = (task, descriptionElement) => {
   const buttonElement = document.createElement("button");
   buttonElement.classList.add("edit-button");
@@ -103,6 +100,35 @@ const deleteTaskButton = (task) => {
   });
 
   return buttonElement;
+};
+
+// Filter Data
+const filterArray = (tasksArr) => {
+  return tasksArr
+    .filter((task) => filters.showCompleted || !task.completed)
+    .sort(sortArray);
+};
+// Sort the array
+const sortArray = (a, b) => {
+  // Eldste først
+  if (filters.sortType === "time asc") {
+    return new Date(b.timestamp) - new Date(a.timestamp);
+  }
+
+  // Nyeste først
+  else if (filters.sortType === "time-desc") {
+    return new Date(a.timestamp) - new Date(b.timestamp);
+  }
+
+  // A til Å
+  else if (filters.sortType === "alpha-asc") {
+    return a.description.localeCompare(b.description);
+  }
+
+  // Å til A
+  else if (filters.sortType === "alpha-desc") {
+    return a.description.localeCompare(b.description);
+  }
 };
 
 const buildPage = (tasksArr) => {
