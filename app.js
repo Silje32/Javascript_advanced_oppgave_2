@@ -31,7 +31,7 @@ taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const formData = new FormData(taskForm);
-  const userInput = formData.get("#input");
+  const userInput = formData.get("input");
 
   if (!userInput) {
     return alert("Input cannot be empty.");
@@ -109,23 +109,24 @@ const filterArray = (tasksArr) => {
     .sort(sortArray);
 };
 // Sort the array
+// Sort Data alphanumeric or by date
 const sortArray = (a, b) => {
-  // Eldste først
+  // Oldest first
   if (filters.sortType === "time asc") {
     return new Date(b.timestamp) - new Date(a.timestamp);
   }
 
-  // Nyeste først
+  // Newest first
   else if (filters.sortType === "time-desc") {
     return new Date(a.timestamp) - new Date(b.timestamp);
   }
 
-  // A til Å
+  // A to Å
   else if (filters.sortType === "alpha-asc") {
     return a.description.localeCompare(b.description);
   }
 
-  // Å til A
+  // Å to A
   else if (filters.sortType === "alpha-desc") {
     return a.description.localeCompare(b.description);
   }
@@ -170,7 +171,3 @@ const renderPage = () => {
   }
   buildPage(filterArray(tasks));
 };
-
-// Filter Data
-
-// Sort Data alphanumeric or by date
