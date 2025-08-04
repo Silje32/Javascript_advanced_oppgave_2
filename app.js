@@ -163,7 +163,7 @@ const buildPage = (tasksArr) => {
     const inputElement = completeTaskInput(task);
     const editBtn = editTaskButton(task, descriptionElement);
     const deleteBtn = deleteTaskButton(task);
-    const favBtn = favouriteButton(task);
+    const favBtn = favTaskButton(task, descriptionElement);
 
     taskContainer.append(
       timestampElement,
