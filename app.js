@@ -31,7 +31,7 @@ taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const formData = new FormData(taskForm);
-  const userInput = formData.get("input");
+  const userInput = formData.get("#input");
 
   if (!userInput) {
     return alert("Input cannot be empty.");
