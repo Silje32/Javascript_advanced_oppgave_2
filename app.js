@@ -19,11 +19,12 @@ sortBy.addEventListener("change", (e) => {
   renderPage();
 });
 
-//toggleShowCompleted.addEventListener("change", (e) => {
-// filters.showCompleted = !filters.showCompleted
-//filters.showCompleted = e.target.checked;
-//renderPage();
-//});
+/* toggleShowCompleted.addEventListener("change", (e) => {
+  filters.showCompleted = !filters.showCompleted;
+  filters.showCompleted = e.target.checked;
+  renderPage();
+});
+*/
 
 // Show Data - make the list
 const taskForm = document.querySelector("#form");
@@ -134,7 +135,7 @@ const sortArray = (a, b) => {
 
 const buildPage = (tasksArr) => {
   console.log(tasksArr);
-  listContainer.replaceChildren();
+  list.replaceChildren();
   tasksArr.forEach((task) => {
     const taskContainer = document.createElement("div");
     taskContainer.classList.add("task-container");
@@ -161,7 +162,7 @@ const buildPage = (tasksArr) => {
       deleteBtn
     );
 
-    listContainer.prepend(taskContainer);
+    list.prepend(taskContainer);
   });
 };
 const renderPage = () => {
