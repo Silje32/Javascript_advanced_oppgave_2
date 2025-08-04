@@ -3,8 +3,8 @@
 // Defining constants
 const list = document.querySelector("#list");
 const input = document.querySelector("#input");
-const showFavourites = document.querySelector("completed");
-const sortBy = document.querySelector("sort-by");
+const showFavourites = document.querySelector("#completed");
+const sortBy = document.querySelector("#sort-by");
 
 let tasks = [];
 let filters = { showCompleted: false, sortType: "time-desc" };
