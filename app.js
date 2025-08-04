@@ -26,12 +26,12 @@ toggleShowCompleted.addEventListener("change", (e) => {
 });
 
 // Show Data - make the list
-const taskForm = document.querySelector("#task-form");
+const taskForm = document.querySelector("#form");
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const formData = new FormData(taskForm);
-  const userInput = formData.get("task-input");
+  const userInput = formData.get("input");
 
   if (!userInput) {
     return alert("Input cannot be empty.");
