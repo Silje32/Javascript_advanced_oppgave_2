@@ -153,13 +153,15 @@ const buildPage = (tasksArr) => {
     const inputElement = completeTaskInput(task);
     const editBtn = editTaskButton(task, descriptionElement);
     const deleteBtn = deleteTaskButton(task);
+    const favBtn = favouriteButton(task);
 
     taskContainer.append(
       timestampElement,
       descriptionElement,
       inputElement,
       editBtn,
-      deleteBtn
+      deleteBtn,
+      favBtn
     );
 
     list.prepend(taskContainer);
