@@ -170,8 +170,8 @@ const buildPage = (tasksArr) => {
       descriptionElement,
       inputElement,
       editBtn,
-      deleteBtn,
-      favBtn
+      favBtn,
+      deleteBtn
     );
 
     list.prepend(taskContainer);
