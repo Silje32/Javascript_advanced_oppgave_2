@@ -65,8 +65,18 @@ const completeTaskInput = (task) => {
 };
 
 // Update Data and add as favourite or recommended
+const favTaskButton = (task, descriptionElement) => {
+  const buttonElement = document.createElement("button");
+  buttonElement.classList.add("fav-button");
+  buttonElement.textContent = "Favourite";
 
-// Sort Data alphanumeric or by date
+  buttonElement.addEventListener("click", (e) => {
+    task.description = descriptionElement.value;
+    saveTasksToStorage();
+  });
+
+  return buttonElement;
+};
 
 // Edit task button
 const editTaskButton = (task, descriptionElement) => {
