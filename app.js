@@ -19,11 +19,11 @@ sortBy.addEventListener("change", (e) => {
   renderPage();
 });
 
-toggleShowCompleted.addEventListener("change", (e) => {
-  // filters.showCompleted = !filters.showCompleted
-  filters.showCompleted = e.target.checked;
-  renderPage();
-});
+//toggleShowCompleted.addEventListener("change", (e) => {
+// filters.showCompleted = !filters.showCompleted
+//filters.showCompleted = e.target.checked;
+//renderPage();
+//});
 
 // Show Data - make the list
 const taskForm = document.querySelector("#form");
@@ -37,7 +37,7 @@ taskForm.addEventListener("submit", (e) => {
     return alert("Input cannot be empty.");
   }
   // Clear the input field after submission
-  taskInput.value = "";
+  input.value = "";
 
   /* Pushe tasks */
   tasks.push({
