@@ -23,7 +23,7 @@ form input[type="submit"] {
   margin-top: 20px;
 }
 /* To-Do List Styles (Main) */
-#list-container {
+#list {
   width: 100%;
   max-width: 800px;
   margin-top: 40px;
